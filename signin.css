@@ -1,0 +1,49 @@
+element.style {
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+user agent stylesheetlink {
+  display: none;
+}
+Inherited from 
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+Pseudo ::before element
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+Pseudo ::after element
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+margin‒
+‒border‒
+‒padding‒
+‒auto × auto‒
+‒‒
+‒‒
+‒
+
+Show inherited properties
+box-sizing: border-box;
+display: none;
+font-family: sans-serif;
+font-size: 10px;
+height: auto;
+width: auto;
