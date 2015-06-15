@@ -1,10 +1,6 @@
 body {
-  background-image:url('http://4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-top: auto;
   padding-bottom: auto;
-  background-color: #eee;
 }
 .nav a {
   color: #5a5a5a;
@@ -19,6 +15,12 @@ body {
 .container {
   position: relative;
   top:100px;
+}
+.jumbotron {
+  background-image:url('http://4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .form-signin {
   max-width: 330px;
