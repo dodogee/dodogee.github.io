@@ -2,8 +2,8 @@ body {
   background-image:url('http://4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: center;
-  padding-bottom: center;
+  padding-top: auto;
+  padding-bottom: auto;
   background-color: #eee;
 }
 
