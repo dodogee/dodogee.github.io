@@ -10,8 +10,11 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin-heading {
-  font-color: #fff;
+.form-signin label{
+  color: #fff;
+}
+.form-signin-heading h2{
+  color: #fff;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
