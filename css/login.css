@@ -6,7 +6,6 @@
           box-sizing: border-box;
   padding: 3px;
 }
-.Form .Buttons .opButton,
-.Form .Buttons .ThirdPartyLoginButtons {
+.Form .Buttons .opButton {
   height: 37px;
 }
