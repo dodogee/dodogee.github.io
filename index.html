@@ -12,85 +12,439 @@
 -->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>메인 :: Lounge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=0.5">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="apple-touch-icon-precomposed" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//sk2.op.gg/icon/Icon@2x.png?v2"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//sk2.op.gg/icon/Icon-144.png?v2"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="autocomplete" content="off">
+    <link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="https://secure.statcounter.com/counter/counter.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="//sk2.op.gg/js2/lib/jquery-1.11.1.min.js"></script>
+    <link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
   </head>
 
   <body>
-    <div class="nav">
-      <div class="container">
-      <h2>Search</h2>
-        <ul class="pull-left">
-          <li><a href="#">Professor Name</a></li>
-          <li><a href="#">Browse the course</a></li>
-        </ul>
-        <ul class="pull-right">
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="login.html">Log In</a></li>
-          <li><a href="help">Help</a></li>
-        </ul>
-      </div>
-    </div>
+    <div class="GlobalWrapper">
+      <div class="IndexContainer">
+        <div class="nFullLayoutContainer">
+          <div class="nContentLayout">
+            <form action="/summoner/" method="get">
+              <div class="IndexHeader">
+                <div class="IndexHeaderBackground"></div>
+                  <div class="IndexHeaderGNB">
+                    <div class="GnbMenuWrap">
+                      <!--script>
+                      $(function(){
+                      setTimeout(function(){
+                      document.getElementById('forumMenuTitle').className = 'animated tada';
+                      }, 1000);
+                      });
+                      </script-->
+                      <ul class="GnbMenu">
+                        <li class="Menu ">
+                         <a href="/summoner/" style="">
+                         소환사 검색</a>
+                        </li>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Lounge</h1>
-        <p>Discuss the topics and share your thought.</p>
-        <a href="#">Learn More</a>
-      </div>
-    </div> 
-    <div class="neighborhood-guides">
-	  <div class="container">
-	     <h2>Lounge Guides</h2>
-    	  <p>Not sure how to use it? We've created Lounge guides for students all around the world. </p>
-	  <div class="row">
-	    <div class="col-md-4">
-	    <div class="thumbnail">
-	    <img src="http://i.imgur.com/SehX84x.png">
-	    </div>
-	        <div class="thumbnail">
-	            <!--<img src="http://goo.gl/an2HXY">-->
-	        </div>
-	    </div>
-	    <div class="col-md-4">
-	        <div class="thumbnail">
-	            <img src="http://i.imgur.com/LjuyxR2.png" >
-	        </div>
-	    </div>
-	    <div class="col-md-4">
-	        <div class="thumbnail">
-	            <img src="http://i.imgur.com/OgISR6Y.png">
-	        </div>
-	    </div>
-	  </div>
-	</div>
-    </div>
-    <div class="learn-more">
-	  <div class="container">
-		<div class="row">
-	      <div class="col-md-4">
-			<h3>Posting</h3>
-			<p>If you found the articles about the topic, post it and show them.</p>
-			<p><a href="#">See how to post on Lounge</a></p>
-	      </div>
-		  <div class="col-md-4">
-			<h3>Discusion</h3>
-			<p>When professor open the discussion room, you can join and reveal your thinking.</p>
-			<p><a href="#">Learn more about the discussion room</a></p>
-		  </div>
-		  <div class="col-md-4">
-			<h3>Trust and Safety</h3>
-			<p>We do not reveal your infomation. We try hard to secure the infomation and relieve you.</p>
-			<p><a href="#">Learn about security at Lounge</a></p>
-    	  </div>
-    	</div>		 
-	  </div>
-	</div>
+                        <li class="Menu ">
+                          <a href="/spectate/" style="">
+                          관전하기</a>
+                        </li>
+
+                        <li class="Menu ">
+                         <a href="/ranking/" style="">
+                          랭킹</a>
+                        </li>
+
+                        <li class="Menu ">
+                         <a href="/statistics/" style="">
+                         통계</a>
+                        </li>
+
+                        <li class="Menu ">
+                          <a href="/multi/" style="">
+                         멀티서치</a>
+                        </li>
+
+                        <li class="Menu ">
+                         <a href="/r/" style=""><i class="icon-youtube-play icon-large" style="color: #E67E22"></i>&nbsp;
+                         롤이슈</a>
+                        </li>
+
+                        <!--li class="Menu "><a href="/forum/" class="animated rotateInDownRight" id="forumMenuTitle"><i class="icon-pencil"></i> 게시판</a></li-->
+                      </ul>
+
+                      <ul class="GlobalTools">
+                        <li class="Menu ">
+                        <a href="/help/">도움말</a>
+                      </li>
+
+
+                      <li class="Region ToggleTool">
+
+                        <div class="Link" onclick="OPGGWeb.GlobalToggle.toggle(this);">
+                          <i class="icon-cloud icon-large"></i>
+                          KR
+                        </div>
+
+                        <div class="BoxEnabled RegionTable">
+                          <div class="RegionTable">
+                            <table class="RegionTable">
+                            <tbody><tr>
+                              <td class="Region">
+                                <a href="//www.op.gg/" class="Region active">Korea</a>
+                              </td>
+                              <td class="ServerStatus tip" title="LOL서버">
+                                <span style="color:lime"><i class="icon-ok"></i></span>
+                              </td>
+                              <td class="RenewStatus tip" title="전적갱신">
+                                <span style="color:lime"><i class="icon-refresh"></i></span>
+                              </td>
+
+                              <td class="Region">
+                              <a href="//na.op.gg/" class="Region ">North America</a>
+                              </td>
+                              <td class="ServerStatus tip" title="LOL서버">
+                                <span style="color:lime"><i class="icon-ok"></i></span>
+                              </td>
+                              <td class="RenewStatus tip" title="전적갱신">
+                                <span style="color:lime"><i class="icon-refresh"></i></span>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="Localization ToggleTool">
+                      <div class="Link" onclick="OPGGWeb.GlobalToggle.toggle(this);">
+                        <i class="icon-globe icon-large"></i>
+                        한국어
+                      </div>
+                      <div class="BoxEnabled LocaleList">
+                        <div class="LocaleList">
+                          <a href="#" class="Locale active" onclick="OPGGWeb.i18n.setLocale('ko_KR');return false;">
+                            한국어
+                          </a>
+                          <a href="#" class="Locale " onclick="OPGGWeb.i18n.setLocale('en_US');return false;">
+                            English
+                          </a>
+                        </div>
+                        <div class="Contribute"><a href="/translate/">번역 참가하기</a></div>
+                      </div>
+                    </li>
+                    <li class="Menu ">
+                      <a href="/member/login/">
+                        <i class="icon-user icon-large"></i> 로그인
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="cb" style="clear: both;"></div></div>
+                  </div>
+                  <div class="IndexHeaderSearch">
+                    <div class="IndexHeaderLogo">
+                      <h1 id="siteLogo">
+                        <a href="/" style="margin: 0px 0; max-width: 95%; width: 450px;">
+                          <!--로고-->
+                          <img src="//sk2.op.gg/images/logo/l122_big.png?3" title="코그모" style="max-width: 95%; width: 450px;">
+                        </a>
+                      </h1>
+                    </div>
+                    <!--<div class="IndexHeaderLogo"><h1 id="siteLogo"><a href="/" style="height: 30px;"><img src="//sk2.op.gg/images/global_logo_index.png" height="100%"></a></h1></div>-->
+                    <div class="IndexHeaderInput">
+                      <input type="text" name="userName" placeholder="소환사명을 입력해주세요." id="searchInput">
+                        <a class="CurrentRegion opButton primary" onclick="window.scrollTo(0,0); OPGGWeb.GlobalToggle.toggle('.Region.ToggleTool'); return false;">
+                          KR
+                        </a>
+                    </div>
+                    <div class="IndexHeaderButton"><input type="submit" class="opButton blue" value="소환사검색"></div>
+                    <script>
+                    function fakeOPGG() {
+                      $.cookie('aprl', '', {expires: 1, path: '/'});
+                      link(location.href);
+                      return false;
+                    }
+                    $(function(){
+                      Summoner.Favorite.loadList('index');
+                      Summoner.History.loadList('index');
+                    });
+                    </script>
+                    <!--<div style="margin-top: 15px;">-->
+                    <!--<a href="//op.gg/app/" target="_blank">-->
+                    <!--<img src="//sk2.op.gg/images/site/app/promotion/banner.png?2">-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <div class="IndexFavoriteSummoners" id="FavoriteSummoners" style="display: none;">
+                      <dl class="SummonerNameList"><dt><i class="icon-star"></i></dt></dl>
+                    </div>
+                    <div class="IndexHeaderAdditionalButton">
+                      <a href="/multi/" class="opButton green small">멀티서치</a>
+                    </div>
+                    <div style="text-align: center;" id="RForumIndexWidget"><div class="RForumArticleWidget">
+                      <div class="RForumArticleLayout notice" id="_articleIdx-33288">
+                        <div class="RForumArticleHeader">
+                          <div class="RForumArticleRank">
+                            <div class="Rank">
+                              제휴
+                            </div>
+                          </div>
+                          <div class="RForumArticleVote" onclick="link('/r/detail/33288');return false;" style="cursor: pointer">
+                            <div class="Vote">
+                              <i class="icon-thumbs-up-alt icon-large"></i>
+                            325</div>
+                          </div>
+                          <div class="RForumArticleImage">
+                            <a href="/r/detail/33288/popular">
+                              <div class="ArticleImage rectImage">
+                                <img src="http://www.op.gg/r/outImage/https://i.ytimg.com/vi/paMgTK-Ozqg/hqdefault.jpg">
+                                <div class="imgOverlay">
+                                  <div class="Vote">
+                                    <i class="icon-thumbs-up-alt icon-large"></i>
+                                    325
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="RForumArticleInfo">
+                            <div class="Title">
+                              <a href="/r/detail/33288/popular">오랜만입니다</a>
+                            </div>
+                            <div class="Info">
+                              <span class="writeDate _timeago tip" data-datetime="1434280747" data-type="" title="2015년 6월 14일 오후 8시 19분">2일 전</span>,
+                              <span class="hit">
+                                58,641 읽힘</span>
+                              </div>
+                              <div class="Action">
+                                <a href="/r/detail/33288/popular" class="opButton transparent black mini OpenCommentButton">
+                                  게시글 보기
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="RForumArticleLayout " id="_articleIdx-33375">
+                          <div class="RForumArticleHeader">
+                            <div class="RForumArticleRank">
+                              <div class="Rank">
+                                1
+                              </div>
+                            </div>
+                            <div class="RForumArticleVote" onclick="link('/r/detail/33375');return false;" style="cursor: pointer">
+                              <div class="Vote">
+                                <i class="icon-thumbs-up-alt icon-large"></i>
+                                408
+                              </div>
+                            </div>
+                            <div class="RForumArticleImage">
+                              <a href="/r/detail/33375/popular">
+                              <div class="ArticleImage rectImage">
+                                <img src="http://www.op.gg/r/outImage/https://i.ytimg.com/vi/TnLxENXx_uw/hqdefault.jpg">
+                                <div class="imgOverlay">
+                                  <div class="Rank">
+                                    1
+                                  </div>
+                                  <div class="Vote">
+                                    <i class="icon-thumbs-up-alt icon-large"></i>
+                                    408
+                                  </div>
+                                </div>
+                              </div>
+                              </a>
+                            </div>
+                            <div class="RForumArticleInfo">
+                              <div class="Title">
+                                <a href="/r/detail/33375/popular">4단 점프</a>
+                              </div>
+                              <div class="Info">
+                                <span class="writeDate _timeago tip" data-datetime="1434366712" data-type="" title="2015년 6월 15일 오후 8시 11분">하루 전</span>,
+                                <span class="hit">
+                                  81,176 읽힘
+                                </span>
+                              </div>
+                              <div class="Action">
+                                <a href="/r/detail/33375/popular" class="opButton transparent black mini OpenCommentButton">
+                                  게시글 보기
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="RForumArticleLayout " id="_articleIdx-33446">
+                          <div class="RForumArticleHeader">
+                            <div class="RForumArticleRank">
+                              <div class="Rank">
+                                2
+                              </div>
+                            </div>
+                            <div class="RForumArticleVote" onclick="link('/r/detail/33446');return false;" style="cursor: pointer">
+                              <div class="Vote">
+                                <i class="icon-thumbs-up-alt icon-large"></i>
+                                66
+                              </div>
+                            </div>
+                            <div class="RForumArticleImage">
+                              <a href="/r/detail/33446/popular">
+                              <div class="ArticleImage rectImage">
+                                <img src="http://www.op.gg/r/outImage/https://i.ytimg.com/vi/DptrCYXcRAc/hqdefault.jpg">
+                                <div class="imgOverlay">
+                                  <div class="Rank">
+                                    2
+                                  </div>
+                                  <div class="Vote">
+                                    <i class="icon-thumbs-up-alt icon-large"></i>
+                                    66
+                                  </div>
+                                </div>
+                              </div>
+                              </a>
+                            </div>
+                            <div class="RForumArticleInfo">
+                              <div class="Title">
+                                <a href="/r/detail/33446/popular">바드로 드래곤스틸 하는법</a>
+                              </div>
+                              <div class="Info">
+                                <span class="writeDate _timeago tip" data-datetime="1434425988" data-type="" title="2015년 6월 16일 오후 12시 39분">7시간 전</span>,
+<span class="hit">
+24,082 읽힘</span>
+</div>
+<div class="Action">
+<a href="/r/detail/33446/popular" class="opButton transparent black mini OpenCommentButton">
+게시글 보기</a>
+</div>
+</div>
+</div>
+</div>
+<div class="RForumArticleLayout " id="_articleIdx-33428">
+<div class="RForumArticleHeader">
+<div class="RForumArticleRank">
+<div class="Rank">
+3</div>
+</div>
+<div class="RForumArticleVote" onclick="link('/r/detail/33428');return false;" style="cursor: pointer">
+<div class="Vote">
+<i class="icon-thumbs-up-alt icon-large"></i>
+86</div>
+</div>
+<div class="RForumArticleImage">
+<a href="/r/detail/33428/popular">
+<div class="ArticleImage rectImage">
+<img src="http://www.op.gg/r/outImage/https://i.ytimg.com/vi/SYGsW7DCG08/hqdefault.jpg">
+<div class="imgOverlay">
+<div class="Rank">
+3</div>
+<div class="Vote">
+<i class="icon-thumbs-up-alt icon-large"></i>
+86</div>
+</div>
+</div>
+</a>
+</div>
+<div class="RForumArticleInfo">
+<div class="Title">
+<a href="/r/detail/33428/popular">피들스틱 말자하 쭉쭉 빨어 봇듀오 </a>
+</div>
+<div class="Info">
+<span class="writeDate _timeago tip" data-datetime="1434407189" data-type="" title="2015년 6월 16일 오전 7시 26분">13시간 전</span>,
+<span class="hit">
+20,746 읽힘</span>
+</div>
+<div class="Action">
+<a href="/r/detail/33428/popular" class="opButton transparent black mini OpenCommentButton">
+게시글 보기</a>
+</div>
+</div>
+</div>
+</div>
+<div class="RForumArticleLayout " id="_articleIdx-33463">
+<div class="RForumArticleHeader">
+<div class="RForumArticleRank">
+<div class="Rank">
+4</div>
+</div>
+<div class="RForumArticleVote" onclick="link('/r/detail/33463');return false;" style="cursor: pointer">
+<div class="Vote">
+<i class="icon-thumbs-up-alt icon-large"></i>
+44</div>
+</div>
+<div class="RForumArticleImage">
+<a href="/r/detail/33463/popular">
+<div class="ArticleImage rectImage">
+<img src="http://www.op.gg/r/outImage/https://i.ytimg.com/vi/ignXAF93T5M/hqdefault.jpg">
+<div class="imgOverlay">
+<div class="Rank">
+4</div>
+<div class="Vote">
+<i class="icon-thumbs-up-alt icon-large"></i>
+44</div>
+</div>
+</div>
+</a>
+</div>
+<div class="RForumArticleInfo">
+<div class="Title">
+<a href="/r/detail/33463/popular">SKT T1 Faker Yasuo vs Varus Highlight</a>
+</div>
+<div class="Info">
+<span class="writeDate _timeago tip" data-datetime="1434438211" data-type="" title="2015년 6월 16일 오후 4시 03분">4시간 전</span>,
+<span class="hit">
+8,705 읽힘</span>
+</div>
+<div class="Action">
+<a href="/r/detail/33463/popular" class="opButton transparent black mini OpenCommentButton">
+게시글 보기</a>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+
+<div style="text-align: center; margin: 15px 0 0 0;">
+<a href="https://www.kootv.com/" target="_blank"><img src="//sk2.op.gg/images/ad/koo/kootv2.jpg"></a>
+</div>
+</div>
+</div>
+</form>
+
+
+
+<div class="IndexFooterContainer">
+<div class="IndexFooterCopyright">
+© 2015 LOUNGE. Data based on Parse. Facebook.
+</div>
+<div class="IndexLinks">
+<a href="/about/">OP.GG에 대하여</a>
+|
+<a href="/about/logos/">로고 히스토리</a>
+</div>
+<div class="IndexSocial">
+<a href="http://www.op.gg/translate/" class="Icon tip" title="Translate" target="_blank" style="color: #27AE60"><i class="icon-globe"></i></a>
+<a href="http://dribbble.com/opgg" class="Icon tip" title="Dribbble" target="_blank"><i class="icon-dribbble"></i></a>
+<a href="http://www.facebook.com/lolopgg" class="Icon tip" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>
+<a href="http://vk.com/lolopgg" class="Icon tip" title="VK" target="_blank"><i class="icon-vk"></i></a>
+<!--<a href="http://weibo.com/u/5446082147" class="Icon tip" title="Weibo" target="_blank"><i class="icon-weibo"></i></a>-->
+</div>
+</div>
+<div style="position: fixed; right: 0px; bottom: 5px;">
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Flolopgg&amp;width=100&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false&amp;appId=231036913605879" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px; vertical-align: middle;" allowtransparency="true"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
   </body>
 </html>
