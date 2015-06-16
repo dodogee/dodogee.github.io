@@ -8,6 +8,7 @@
   height: auto;
   margin: 0 auto;
 }
-.Form .Buttons .opButton {
+.Form .Buttons .opButton,
+.Form .ThirdPartyLoginButtons .opButton {
   height: 37px;
 }
