@@ -10,20 +10,17 @@
 88888888888  `"Y8888Y"'    `"Y888888888 88       8888   `"Y88888P"   88888888888
      Copyright © 2015 Lounge. All rights reserved.
 -->
-<html>
+<html lang="ko_KR">
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>로그인 :: Lounge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=0.5">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/min.css">
-    <link rel="stylesheet" href="css/min.moblie.css">
-    <link rel="stylesheet" herf="css/min.page.css">
-    <link rel="stylesheet" herf="css/min.page2.css">
     <link rel="apple-touch-icon-precomposed" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//sk2.op.gg/icon/Icon@2x.png?v2"/>
@@ -31,13 +28,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 		<meta name="format-detection" content="telephone=no">
 		<meta name="autocomplete" content="off">
-		<!--
-		<link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		-->
   </head>
 
   <body>
@@ -56,31 +46,28 @@
       </div>
     </div>
 
-    <!--<div class="jumbotron">-->
+    <div class="jumbotron">
       <div class="container">
-      	<div class="PhotoScreenContent">
-      	<div class="Center">
-      	<div class="VerticalMiniForm LoginForm">
       	<div class="Loge">
       		<h1>
       			<a href="/">Lounge</a>
       		</h1>
       	</div>
-    	  <div class="Form">
+    	  <div class="form-login">
 					<form action="/member/ajax/login.json/" method="post" class="kajax">
 						<input type="hidden" name="referer" value="http://www.op.gg/">
-							<div class="Input Email">
+							<div class="input Email">
 								<span class="title"><i class="icon-user"></i></span>
 								<span class="input"><input type="text" class="Email" name="identifier" placeholder="이메일"></span>
 							</div>
-							<div class="Input Password">
+							<div class="input Password">
 								<span class="title"><i class="icon-key"></i></span>
 								<span class="input"><input type="password" class="Password" name="password" placeholder="비밀번호"></span>
 									<div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a></div>
 								</div>
 								<div class="Buttons">
-									<button class="opButton green login">로그인</button>
-									<a href="/member/join/" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
+									<button class="Button green login">로그인</button>
+									<a href="/member/join/" class="Button blue joinLink">이메일 주소로 간단하게 회원가입</a>
 								</div>
 								<div class="ThirdPartyLoginButtons">
 									<a href="#" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook" onclick="Login.loginWithFacebook(this); return false;">
