@@ -28,9 +28,21 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 		<meta name="format-detection" content="telephone=no">
 		<meta name="autocomplete" content="off">
+		<link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
+  	<script>
+			$(function(){
+			$('.VerticalMiniForm .Form .Input input')
+			.on('focus', function(){
+			$(this).closest('.input').addClass('focus');
+			})
+			.on('blur', function(){
+			$(this).closest('.input').removeClass('focus');
+			})
+			})
+	</script>
     <div class="nav">
       <div class="container">
       <h2>Search</h2>
