@@ -109,3 +109,16 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.form-signin .ThirdPartyLoginButtons{
+  margin-top:15px;
+  padding-top:15px;
+  text-align:center;
+  border-top:1px solid #2c3e50;
+  
+}.PhotoScreen .PhotoScreenContent .Center>.VerticalMiniForm>.Form .ThirdPartyLoginButtons .ThirdPartyLoginButton.LoginButtonWithFacebook{background:#3B5998;}
+.form-signin .Buttons {
+  padding-top:6px;
+  margin-top:15px;
+  font-size:14px;
+  font-weight:bold;
+}
