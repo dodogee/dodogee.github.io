@@ -72,15 +72,24 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
-.Form {
+.Form .Logo,
+.Form .opButton {
   margin-bottom: 10px;
 }
-.Form .form-control {
+.Form .Email .Password {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  font-size: 16px;
+  font-size: 12px;
 }
+.Form input[type="text"] {
+  margin-bottom: 0px;
+}
+.Form input[type="password"] {
+  margin-bottom: 0px;
+}
+
+
