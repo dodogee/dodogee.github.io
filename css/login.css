@@ -1,4 +1,5 @@
-.Form .Email .Password {
+.Form .Email,
+.Form .Password {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -6,6 +7,7 @@
           box-sizing: border-box;
   padding: 10px;
 }
-.Buttons .opButton .ThirdPartyLoginButtons {
+.Form .Buttons .opButton,
+.Form .Buttons .ThirdPartyLoginButtons {
   height: 15px;
 }
