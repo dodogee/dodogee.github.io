@@ -65,5 +65,22 @@ body {
     margin-bottom: 13px;
 }
 .Buttons .opButton {
-    width: 354px;
+    width: 330px;
+}
+.Form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.Form {
+  margin-bottom: 10px;
+}
+.Form .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
 }
