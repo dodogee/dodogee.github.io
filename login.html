@@ -22,22 +22,21 @@
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="apple-touch-icon-precomposed" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//sk2.op.gg/icon/Icon@2x.png?v2"/>
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//sk2.op.gg/icon/Icon-144.png?v2"/>
-		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-		<meta name="format-detection" content="telephone=no">
-		<meta name="autocomplete" content="off">
-		<link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
-		<link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
-		<script type="text/javascript" async="" src="https://secure.statcounter.com/counter/counter.js"></script>
-		<script async="" src="//www.google-analytics.com/analytics.js"></script>
-		<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
-		<script type="text/javascript" src="//sk2.op.gg/js2/lib/jquery-1.11.1.min.js"></script>
-		<link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//sk2.op.gg/icon/Icon-72.png?v2"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//sk2.op.gg/icon/Icon@2x.png?v2"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//sk2.op.gg/icon/Icon-144.png?v2"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="autocomplete" content="off">
+    <link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
+    <link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="https://secure.statcounter.com/counter/counter.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="//sk2.op.gg/js2/lib/jquery-1.11.1.min.js"></script>
+    <link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -51,120 +50,74 @@
 			$(this).closest('.input').removeClass('focus');
 			})
 			})
-	</script>
-    <div class="nav">
-      <div class="container">
-      <h2>Search</h2>
-        <ul class="pull-left">
-          <li><a href="#">Professor Name</a></li>
-          <li><a href="#">Browse the course</a></li>
-        </ul>
-        <ul class="pull-right">
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="login.html">Log In</a></li>
-          <li><a href="help">Help</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="jumbotron">
-      <div class="container">
-      	<div class="PhotoScreenContent">
-      	<div class="Center">
-      	<div class="VerticalMiniForm">
-      	<div class="Logo">
-      		<h1>
-      			<a href="/">Lounge</a>
-      		</h1>
-      	</div>
-    	  <div class="Form">
-					<form action="/member/ajax/login.json/" method="post" class="kajax">
-						<input type="hidden" name="referer" value="http://lounge.parseapp.com/">
-							<div class="Input Email">
-								<span class="title"><i class="icon-user"></i></span>
-								<span class="input"><input type="text" class="Email" name="identifier" placeholder="이메일"></span>
+		</script>
+		<div class="PhotoScreen">
+			<div class="PhotoScreenBg" style="background-image: url(//4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg)">
+				<div class="PhotoScreenBgVinetter"></div>
+					<div class="PhotoScreenBgPattern"></div>
+					</div>
+					<script>
+						$(function(){
+							$('.VerticalMiniForm .Form .Input input')
+								.on('focus', function(){
+								$(this).closest('.Input').addClass('focus');
+							})
+								.on('blur', function(){
+								$(this).closest('.Input').removeClass('focus');
+							})
+						})
+					</script>
+					<div class="PhotoScreenContent">
+						<div class="Center">
+							<div class="VerticalMiniForm LoginForm">
+								<div class="Logo">
+									<h1><a href="/">OP.GG</a></h1>
+									<!--<h1><a href="/"><img src="//sk2.op.gg/images/global_logo_index.png"></a></h1>-->
+								</div>
+								<div class="Form">
+									<form action="/member/ajax/login.json/" method="post" class="kajax">
+										<input type="hidden" name="referer" value="http://www.op.gg/">
+										<div class="Input Email">
+											<span class="title"><i class="icon-user"></i></span>
+											<span class="input"><input type="text" class="Email" name="identifier" placeholder="이메일"></span>
+										</div>
+										<div class="Input Password">
+											<span class="title"><i class="icon-key"></i></span>
+											<span class="input"><input type="password" class="Password" name="password" placeholder="비밀번호"></span>
+												<div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a></div>
+												</div>
+											<div class="Buttons">
+												<button class="opButton green login">로그인</button>
+												<a href="/member/join/" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
+											</div>
+											<div class="ThirdPartyLoginButtons">
+												<a href="#" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook" onclick="Login.loginWithFacebook(this); return false;">
+													<i class="icon-facebook icon-large"></i>
+													&nbsp;
+													페이스북으로 접속
+												</a>
+											</div>
+										</form>
+									</div>
+									<div class="FormDesc">
+										이메일 및 개인정보는 절대 타인에게 공개되지 않으므로 안심하세요!
+									</div>
+								</div>
 							</div>
-							<div class="Input Password">
-								<span class="title"><i class="icon-key"></i></span>
-								<span class="input"><input type="password" class="Password" name="password" placeholder="비밀번호"></span>
-									<div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a></div>
-								</div>
-								<div class="Buttons">
-									<button class="opButton green login">로그인</button>
-									<button href="/member/join/" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</button>
-								</div>
-								<div class="ThirdPartyLoginButtons">
-									<button href="#" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook" onclick="Login.loginWithFacebook(this); return false;">
-									<i class="icon-facebook icon-large"></i>
-										&nbsp;
-										페이스북으로 접속
-									</button>
-								</div>
-							</form>
 						</div>
-						<div class="FormDesc">
-							이메일 및 개인정보는 절대 타인에게 공개되지 않으므로 안심하세요!
+						<div class="PhotoInformation">
+							라운지
 						</div>
-  		    </div>
-  		  </div>
-  		  </div>
-  		  </div>
-  		  </div>
-  		</div>
-
-    <div class="neighborhood-guides">
-		  <div class="container">
-		     <h2>Lounge Guides</h2>
-	    	  <p>Not sure how to use it? We've created Lounge guides for students all around the world. </p>
-				  <div class="row">
-				    <div class="col-md-4">
-					    <div class="thumbnail">
-						    <img src="http://i.imgur.com/SehX84x.png">
-	  				  </div>
-				      <div class="thumbnail">
-	            <!--<img src="http://goo.gl/an2HXY">-->
-	  		      </div>
-	  			  </div>
-	  			  <div class="col-md-4">
-			       <div class="thumbnail">
-	            <img src="http://i.imgur.com/LjuyxR2.png" >
-	  		     </div>
-				   </div>
-			    <div class="col-md-4">
-		       <div class="thumbnail">
-	           <img src="http://i.imgur.com/OgISR6Y.png">
-	        </div>
-	  		</div>
-	  	</div>
-		</div>
-  </div>
-  <div class="learn-more">
-	  <div class="container">
-			<div class="row">
-	    	<div class="col-md-4">
-					<h3>Posting</h3>
-						<p>If you found the articles about the topic, post it and show them.</p>
-						<p><a href="#">See how to post on Lounge</a></p>
-	  	  </div>
-			  <div class="col-md-4">
-					<h3>Discusion</h3>
-					<p>When professor open the discussion room, you can join and reveal your thinking.</p>
-					<p><a href="#">Learn more about the discussion room</a></p>
-			  </div>
-			  <div class="col-md-4">
-					<h3>Trust and Safety</h3>
-					<p>We do not reveal your infomation. We try hard to secure the infomation and relieve you.</p>
-					<p><a href="#">Learn about security at Lounge</a></p>
-    	  </div>
-    	</div>		 
-	  </div>
-	</div>
-	<script type="text/javascript">
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	</script>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					</div>
+				</div>
+			</div>
+			<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter/1ldYU13brY_.js?version=41#channel=f32e57d11c&amp;origin=https%3A%2F%2Fwww.op.gg" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+				<script type="text/javascript">
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				</script>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </body>
 </html>
