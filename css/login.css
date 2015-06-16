@@ -4,9 +4,9 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: auto;
+  padding: 3px;
 }
 .Form .Buttons .opButton,
 .Form .Buttons .ThirdPartyLoginButtons {
-  height: 50px;
+  height: 37px;
 }
