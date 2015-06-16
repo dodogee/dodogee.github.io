@@ -1,8 +1,3 @@
-html {
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  font-family: Helvetica,AppleSDGothic,"Apple SD Gothic Neo",AppleGothic,Dotumche,Gulimche,Arial,Tahoma;
-}
 body {
   padding-top: auto;
   padding-bottom: auto;
@@ -68,57 +63,4 @@ body {
 .neighborhood-guides p{
     font-size: 15px;
     margin-bottom: 13px;
-}
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin label{
-  color: #fff;
-}
-.form-signin h2{
-  color: #fff;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.form-signin .ThirdPartyLoginButtons{
-  margin-top:15px;
-  padding-top:15px;
-  text-align:center;
-  border-top:1px solid #2c3e50;
-  
-}.PhotoScreen .PhotoScreenContent .Center>.VerticalMiniForm>.Form .ThirdPartyLoginButtons .ThirdPartyLoginButton.LoginButtonWithFacebook{background:#3B5998;}
-.form-signin .Buttons {
-  padding-top:6px;
-  margin-top:15px;
-  font-size:14px;
-  font-weight:bold;
 }
