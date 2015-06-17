@@ -10,14 +10,13 @@
   width: 300px;
   margin: 0 auto;
 }
-.Form .Buttons .opButton .green,
-.Form .Buttons .opButton .blue {
+.Form .Buttons{
   height: 37px;
   width: 300px;
   margin: 0 auto;
   margin-top: 15px;
 }
-.Form .ThirdPartyLoginButtons .opButton .ThirdPartyLoginButton {
+.Form .ThirdPartyLoginButtons .opButton{
   line-height: 20px;
   height: 37px;
   margin: 0 auto;
