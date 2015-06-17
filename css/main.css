@@ -1,7 +1,7 @@
 .nFullLayoutContainer {
   background-color: #fff;
 }
-.IndexHeaderSearch .IndexHeaderInput, 
-.IndexHeaderSearch .IndexHeaderAdditionalButton {
+.IndexHeaderSearch .IndexHeaderInput .CurrentRegion .opButton, 
+.IndexHeaderSearch .IndexHeaderAdditionalButton .opButton {
   height: 37px;
 }
