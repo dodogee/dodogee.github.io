@@ -7,9 +7,14 @@
           box-sizing: border-box;
   padding: auto;
   height: auto;
+  width: 300px;
   margin: 0 auto;
 }
-.Form .Buttons .opButton,
+.Form .Buttons .opButton {
+  height: 37px;
+  width: 300px;
+}
 .Form .ThirdPartyLoginButtons .opButton {
   height: 37px;
+  width: 300px;
 }
