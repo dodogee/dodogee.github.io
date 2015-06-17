@@ -1,3 +1,6 @@
 .IndexHeaderBackground {
   background-color: #fff;
 }
+.IndexHeaderInput, .IndexHeaderAdditionalButton {
+  height: 37px;
+}
