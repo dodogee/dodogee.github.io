@@ -155,7 +155,6 @@ $(function() {
       "click #toggle-all": "toggleAllComplete",
       "click .log-out": "logOut",
       "click ul#filters a": "selectFilter",
-      "click .joinLink": "SignUpView"
     },
 
     el: ".content",
@@ -295,13 +294,14 @@ $(function() {
   
   var LogInView = Parse.View.extend({
     events: {
-      "submit form.login-form": "logIn"
+      "submit form.login-form": "logIn",
+      "click .joinLink": "SignUpView"
     },
 
     el: ".content",
     
     initialize: function() {
-      _.bindAll(this, "logIn");
+      _.bindAll(this, "logIn", "SignUpView");
       this.render();
     },
 
@@ -322,12 +322,16 @@ $(function() {
           self.$(".login-form button").removeAttr("disabled");
         }
       });
-
+      
       this.$(".login-form button").attr("disabled", "disabled");
 
       return false;
     },
-
+    SignUpView: function(e) {
+      new SignUpView();
+      this.undelegateEvents();
+      delete this;
+    },
     render: function() {
       this.$el.html(_.template($("#login-template").html()));
       this.delegateEvents();
