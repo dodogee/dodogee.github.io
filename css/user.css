@@ -10,7 +10,8 @@
   width: 300px;
   margin: 0 auto;
 }
-.Form .Buttons{
+.Form .Buttons,
+.Form .Buttons .opButton{
   height: 37px;
   width: 300px;
   margin: 0 auto;
