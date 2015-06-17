@@ -1,6 +1,7 @@
-.IndexHeaderBackground {
+.nFullLayoutContainer {
   background-color: #fff;
 }
-.IndexHeaderInput, .IndexHeaderAdditionalButton {
+.IndexHeaderSearch .IndexHeaderInput, 
+.IndexHeaderSearch .IndexHeaderAdditionalButton {
   height: 37px;
 }
