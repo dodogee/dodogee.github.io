@@ -154,7 +154,8 @@ $(function() {
       "click #clear-completed": "clearCompleted",
       "click #toggle-all": "toggleAllComplete",
       "click .log-out": "logOut",
-      "click ul#filters a": "selectFilter"
+      "click ul#filters a": "selectFilter",
+      "click .joinLink": "SignUpView"
     },
 
     el: ".content",
@@ -306,10 +307,10 @@ $(function() {
 
     logIn: function(e) {
       var self = this;
-      var username = this.$("#login-username").val();
+      var username = this.$("#login-email").val();
       var password = this.$("#login-password").val();
       
-      Parse.User.logIn(username, password, {
+      Parse.User.logIn(email, password, {
         success: function(user) {
           new ManageTodosView();
           self.undelegateEvents();
@@ -317,7 +318,7 @@ $(function() {
         },
 
         error: function(user, error) {
-          self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+          self.$(".login-form .error").html("Invalid email or password. Please try again.").show();
           self.$(".login-form button").removeAttr("disabled");
         }
       });
@@ -369,7 +370,7 @@ $(function() {
     },
 
     render: function() {
-      this.$el.html(_.template($("#login-template").html()));
+      this.$el.html(_.template($("#signup-template").html()));
       this.delegateEvents();
     }
   });
