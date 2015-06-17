@@ -11,18 +11,12 @@
   margin: 0 auto;
 }
 .Form .Buttons .opButton {
-  position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: auto;
   height: 37px;
   width: 300px;
-  margin-top: 15px;
   margin: 0 auto;
+  margin-top: 15px;
 }
 .Form .ThirdPartyLoginButtons .opButton {
-  padding: auto;
   height: 37px;
   margin: 0 auto;
   margin-top: 15px;
