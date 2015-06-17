@@ -19,14 +19,12 @@
   height: 37px;
   width: 300px;
   margin-top: 15px;
+  margin: 0 auto;
 }
 .Form .ThirdPartyLoginButtons .opButton {
-  position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
   padding: auto;
   height: 37px;
+  margin: 0 auto;
   margin-top: 15px;
   text-align: center;
   border-top: 1px solid #2c3e50;
