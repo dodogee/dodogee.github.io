@@ -291,17 +291,16 @@ $(function() {
       this.todos.each(function (todo) { todo.save({'done': done}); });
     }
   });
-
+  
   var LogInView = Parse.View.extend({
     events: {
-      "submit form.login-form": "logIn",
-      "submit form.signup-form": "signUp"
+      "submit form.login-form": "logIn"
     },
 
     el: ".content",
     
     initialize: function() {
-      _.bindAll(this, "logIn", "signUp");
+      _.bindAll(this, "logIn");
       this.render();
     },
 
@@ -328,12 +327,30 @@ $(function() {
       return false;
     },
 
+    render: function() {
+      this.$el.html(_.template($("#login-template").html()));
+      this.delegateEvents();
+    }
+  });
+  var SignUpView = Parse.View.extend({
+    events: {
+      "submit form.signup-form": "signUp"
+    },
+
+    el: ".content",
+    
+    initialize: function() {
+      _.bindAll(this, "signUp");
+      this.render();
+    },
+    
     signUp: function(e) {
       var self = this;
+      var email = this.$("#signup-email").val();
       var username = this.$("#signup-username").val();
       var password = this.$("#signup-password").val();
       
-      Parse.User.signUp(username, password, { ACL: new Parse.ACL() }, {
+      Parse.User.signUp(email, username, password, { ACL: new Parse.ACL() }, {
         success: function(user) {
           new ManageTodosView();
           self.undelegateEvents();
@@ -346,7 +363,7 @@ $(function() {
         }
       });
 
-      this.$(".signup-form button").attr("disabled", "disabled");
+      this.$(".signup-form button").attr("disabled", "disabled", "disabled");
 
       return false;
     },
@@ -356,7 +373,7 @@ $(function() {
       this.delegateEvents();
     }
   });
-
+    
   // The main view for the app
   var AppView = Parse.View.extend({
     // Instead of generating a new element, bind to the existing skeleton of
