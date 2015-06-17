@@ -67,16 +67,18 @@
                 </div>
 	        <!--<h1><a href="/"><img src="//sk2.op.gg/images/global_logo_index.png"></a></h1>-->
 	      </div>
+	      <script type="text/template" id="login-template">
+	      <header id="header"></header>
 	      <div class="Form">
-	        <form action="/member/ajax/login.js/" method="post" class="kajax">
+	        <form class="login-form">
 	          <input type="hidden" name="referer" value="http://lounge.parseapp.com/">
 	          <div class="Input Email">
 	            <span class="title"><i class="icon-user"></i></span>
-	            <span class="input"><input type="text" class="Email" name="identifier" placeholder="이메일"></span>
+	            <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="이메일"></span>
 	          </div>
 	          <div class="Input Password">
 	            <span class="title"><i class="icon-key"></i></span>
-	            <span class="input"><input type="password" class="Password" name="password" placeholder="비밀번호"></span>
+	            <span class="input"><input type="password" id="login-password" class="Password" name="password" placeholder="비밀번호"></span>
 	            <div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a>
 	            </div>
 	          </div>
@@ -111,27 +113,6 @@
     </div>
 
     <!-- Templates -->
-
-    <script type="text/template" id="login-template">
-      <header id="header"></header>
-      <div class="login">
-        <form class="login-form">
-          <h2>Log In</h2>
-          <div class="error" style="display:none"></div>
-          <input type="text" id="login-username" placeholder="Username" />
-          <input type="password" id="login-password" placeholder="Password" />
-          <button>Log In</button>
-        </form>
-
-        <form class="signup-form">
-          <h2>Sign Up</h2>
-          <div class="error" style="display:none"></div>
-          <input type="text" id="signup-username" placeholder="Username" />
-          <input type="password" id="signup-password" placeholder="Create a Password" />
-          <button>Sign Up</button>
-        </form>
-      </div>
-    </script>
 
     <script type="text/template" id="manage-todos-template">
       <div id="user-info">
