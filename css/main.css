@@ -1,7 +1,16 @@
 .nFullLayoutContainer {
   background-color: #fff;
 }
-.IndexHeaderSearch .IndexHeaderInput .CurrentRegion .opButton, 
-.IndexHeaderSearch .IndexHeaderAdditionalButton .opButton {
+.IndexHeaderSearch .IndexHeaderInput {
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: auto;
+  height: auto;
+  margin: 0 auto;
+}
+.IndexHeaderSearch .IndexHeaderAdditionalButton .opButton,
+.IndexHeaderSearch .CurrentRegion .opButton{
   height: 37px;
 }
