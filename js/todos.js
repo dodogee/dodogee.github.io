@@ -8,7 +8,20 @@ $(document).ready(function() {
 
   // Initialize Parse with your Parse application javascript keys
   Parse.initialize("cfwULV0DDbuYUytwY7Ve9gyrFvKM2jJcGWabPqIU", "lUKeO8vWE2QxQwdAFNZhKpKOW3IhKQyd0YOMghcv");
-
+  //Ti.Facebook.appid = '1459046514407348';
+  // Initialize the Facebook SDK with Parse as described at 
+  // https://parse.com/docs/js_guide#fbusers
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    Parse.FacebookUtils.init({
+      appId      : '1459046514407348', // Facebook App ID
+      channelUrl : '//lounge.parseapp.com/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow Parse to access the session
+      xfbml      : true  // parse XFBML
+      //version    : 'v2.3'
+    });
+  };
   // Todo Model
   // ----------
 
@@ -318,7 +331,7 @@ $(document).ready(function() {
               delete self;
           } else {
               Parse.User.logOut();
-              self.$(".login-form .error").html("이메일 주소가 유효하지 않습니다.").show();
+              self.$(".login-form .error").html("이메일 주소가 확인되지 않았습니다.").show();
               this.$(".login-form button").removeAttr("disabled");
           }
         },
@@ -335,24 +348,67 @@ $(document).ready(function() {
       return false;
     },
     signUpLink: function(e) {
-      this.$(".login-form").hide().addClass('.hide');
-      this.$(".signup-form").show().addClass('.show');
-      this.undelegateEvents();
-      delete this;
+      this.$(".login-form").hide().removeClass('.focus');
+      this.$(".signup-form").show().addClass('.focus');
     },
     loginWithFacebook: function(e) {
-      Parse.FacebookUtils.logIn(null, {
-      success: function(user) {
-          if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
-          } else {
-            alert("User logged in through Facebook!");
+      var self = this;
+      $(".LoginButtonWithFacebook")
+        .toggleClass("disabled")
+        .empty()
+        .spin({length: 5, radius: 5, lines: 8, width: 3, color: "#fff"});
+      if (Parse.User.current()) {
+        new ManageTodosView();
+        self.undelegateEvents();
+        delete self;
+      } else {
+        Parse.FacebookUtils.logIn(null, {
+          success: function(user) {
+            // If it's a new user, let's fetch their name from FB
+            if (!user.existed()) {
+              // We make a graph request
+              FB.api('/me', {scope: scopes}, function(response) {
+                if (!response.error) {
+                  // We save the data on the Parse user
+                  user.set("username", response.id);
+                  user.set("email", response.email);
+                  user.signUp(null, {
+                    success: function(user) {
+                      if (user.get("emailVerified")) {
+                          new ManageTodosView();
+                          self.undelegateEvents();
+                          delete self;
+                      } else {
+                          self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
+                          $(".LoginButtonWithFacebook").removeClass("disabled");
+                      }
+                    },
+                    error: function(user, error) {
+                      self.$(".login-form .error").html("정보를 정확하게 입력해주세요!"+response.name+response.password+response.email).show();
+                      self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
+                    }
+                  });
+                } else {
+                  self.$(".login-form .error").html("페이스북에 문제가 생긴 모양입니다!").show();
+                  self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
+                }
+              });
+            // If it's an existing user that was logged in, we save the score
+            } else {
+              new ManageTodosView();
+              self.undelegateEvents();
+              delete self;
+            }
+          },
+          error: function(user, error) {
+            Parse.User.logOut();
+            self.$(".login-form .error").html("뭔가 잘못된 것 같습니다!").show();
           }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
+        });
+        this.$(".LoginButtonWithFacebook a").attr("disabled", "disabled");
+      }
+      
+      return false;
     },
     signUp: function(e) {
       var self = this;
@@ -360,7 +416,7 @@ $(document).ready(function() {
       var username = this.$("#signup-username").val();
       var password = this.$("#signup-password").val();
       
-      user.signUp(username, password, {
+      Parse.User.signUp(username, password, {
         ACL: new Parse.ACL(), email: email }, {
         success: function(user) {
           if (user.get("emailVerified")) {
@@ -368,9 +424,10 @@ $(document).ready(function() {
               self.undelegateEvents();
               delete self;
           } else {
-              Parse.User.logOut();
+              self.$(".signup-form").hide().removeClass('.focus');
+              self.$(".login-form").show().addClass('.focus');
               self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
-              this.$(".login-form button").removeAttr("disabled");
+              self.$(".signup-form button").removeAttr("disabled");
           }
         },
 
@@ -395,7 +452,7 @@ $(document).ready(function() {
   var AppView = Parse.View.extend({
     // Instead of generating a new element, bind to the existing skeleton of
     // the App already present in the HTML.
-    el: $("#todoapp"),
+    el: $("#lounge"),
 
     initialize: function() {
       this.render();
@@ -433,9 +490,27 @@ $(document).ready(function() {
     }
   });
 
+  
   var state = new AppState;
 
   new AppRouter;
   new AppView;
   Parse.history.start();
 });
+
+/* Spin.js jQuery plugin */
+$.fn.spin = function(opts) {
+  this.each(function() {
+    var $this = $(this),
+        data = $this.data();
+
+    if (data.spinner) {
+      data.spinner.stop();
+      delete data.spinner;
+    }
+    if (opts !== false) {
+      data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+    }
+  });
+  return this;
+};
