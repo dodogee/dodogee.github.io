@@ -2,12 +2,12 @@
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses Parse to persist
 // the todo items and provide user authentication and sessions.
 
-$(document).ready(function() {
+$(function() {
 
   Parse.$ = jQuery;
 
   // Initialize Parse with your Parse application javascript keys
-  Parse.initialize("cfwULV0DDbuYUytwY7Ve9gyrFvKM2jJcGWabPqIU", "lUKeO8vWE2QxQwdAFNZhKpKOW3IhKQyd0YOMghcv");
+  Parse.initialize("APPLICATION_ID", "JAVASCRIPT_KEY");
 
   // Todo Model
   // ----------
@@ -163,10 +163,11 @@ $(document).ready(function() {
     // loading any preexisting todos that might be saved to Parse.
     initialize: function() {
       var self = this;
+
       _.bindAll(this, 'addOne', 'addAll', 'addSome', 'render', 'toggleAllComplete', 'logOut', 'createOnEnter');
 
       // Main todo management template
-      this.$el.html(_.template($('#manage-todos-template').html()));
+      this.$el.html(_.template($("#manage-todos-template").html()));
       
       this.input = this.$("#new-todo");
       this.allCheckbox = this.$("#toggle-all")[0];
@@ -289,42 +290,72 @@ $(document).ready(function() {
       this.todos.each(function (todo) { todo.save({'done': done}); });
     }
   });
-  
-  var SignUpView = Parse.View.extend({
+
+  var LogInView = Parse.View.extend({
     events: {
+      "submit form.login-form": "logIn",
       "submit form.signup-form": "signUp"
     },
 
     el: ".content",
     
     initialize: function() {
-      _.bindAll(this, "signUp");
+      _.bindAll(this, "logIn", "signUp");
       this.render();
     },
-    
+
+    logIn: function(e) {
+      var self = this;
+      var username = this.$("#login-username").val();
+      var password = this.$("#login-password").val();
+      
+      Parse.User.logIn(username, password, {
+        success: function(user) {
+　　　　　　if (user.get("emailVerified")) {
+              new ManageTodosView();
+              self.undelegateEvents();
+              delete self;
+          } else {
+              Parse.User.logOut();
+              self.$(".login-form .error").html("email address not verified. Please check your email.").show();
+              this.$(".login-form button").removeAttr("disabled");
+          }
+        },
+
+        error: function(user, error) {
+          self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+          this.$(".login-form button").removeAttr("disabled");
+        }
+      });
+
+      this.$(".login-form button").attr("disabled", "disabled");
+
+      return false;
+    },
+
     signUp: function(e) {
       var self = this;
       var email = this.$("#signup-email").val();
       var username = this.$("#signup-username").val();
       var password = this.$("#signup-password").val();
       
-      user.signUp(username, password, {
+      Parse.User.signUp(username, password, {
         ACL: new Parse.ACL(), email: email }, {
         success: function(user) {
-          if (user.get("emailVerified")) {
-              new ManageTodosView();
-              self.undelegateEvents();
-              delete self;
+　　　　　　if (user.get("emailVerified")) {
+            new ManageTodosView();
+            self.undelegateEvents();
+            delete self;
           } else {
-              Parse.User.logOut();
-              self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
-              this.$(".login-form button").removeAttr("disabled");
+            Parse.User.logOut();
+            self.$(".signup-form .error").html("Send message your email address. Please check your email.").show();
+            this.$(".signup-form button").removeAttr("disabled");
           }
         },
 
         error: function(user, error) {
-          self.$(".signup-form .error").html("정보를 정확하게 입력해주세요!").show();
-          self.$(".signup-form button").removeAttr("disabled");
+          self.$(".signup-form .error").html(error.message).show();
+          this.$(".signup-form button").removeAttr("disabled");
         }
       });
 
@@ -334,79 +365,11 @@ $(document).ready(function() {
     },
 
     render: function() {
-      this.$el.html(_.template($("#signup-template").html()));
-      this.delegateEvents();
-    }
-  });  
-  var LogInView = Parse.View.extend({
-    events: {
-      "submit form.login-form": "logIn",
-      "click .joinLink": "signUpLink",
-      "click .LoginButtonWithFacebook": "loginWithFacebook"
-    },
-
-    el: ".content",
-    
-    initialize: function() {
-      _.bindAll(this, "logIn", "signUpLink", "loginWithFacebook");
-      this.render();
-    },
-
-    logIn: function(e) {
-      var self = this;
-      var email = this.$("#login-email").val();
-      var password = this.$("#login-password").val();
-      
-      Parse.User.logIn(email, password, {
-        success: function(user) {
-          if (user.get("emailVerified")) {
-              new ManageTodosView();
-              self.undelegateEvents();
-              delete self;
-          } else {
-              Parse.User.logOut();
-              self.$(".login-form .error").html("이메일 주소가 유효하지 않습니다.").show();
-              this.$(".login-form button").removeAttr("disabled");
-          }
-        },
-
-        error: function(user, error) {
-          //self.$(".signup-form .error").html(error.message).show();
-          self.$(".login-form .error").html("잘못된 이메일이나 패스워드를 입력하셨습니다.").show();
-          self.$(".login-form button").removeAttr("disabled");
-        }
-      });
-      
-      this.$(".login-form button").attr("disabled", "disabled");
-
-      return false;
-    },
-    signUpLink: function(e) {
-      new SignUpView();
-      this.undelegateEvents();
-      delete this;
-    },
-    loginWithFacebook: function(e) {
-      Parse.FacebookUtils.logIn(null, {
-      success: function(user) {
-          if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
-          } else {
-            alert("User logged in through Facebook!");
-          }
-        },
-        error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
-        }
-      });
-    },
-    render: function() {
       this.$el.html(_.template($("#login-template").html()));
       this.delegateEvents();
     }
   });
 
-    
   // The main view for the app
   var AppView = Parse.View.extend({
     // Instead of generating a new element, bind to the existing skeleton of
