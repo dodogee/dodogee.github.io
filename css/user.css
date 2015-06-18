@@ -10,19 +10,32 @@
   width: 300px;
   margin: 0 auto;
 }
-.Form .Buttons,
+#todoapp .content .login-form .error,
+#todoapp .content .signup-form .error {
+  font-family: 'Open Sans','Lato',Segoe,"Segoe UI",Candara,Calibri,Helvetica,'Nanum Barun Gothic','Nanum Gothic','Malgun Gothic','맑은고딕','맑은 고딕',"Apple SD Gothic Neo",AppleGothic,Dotum,Gulim,Optima,Segoe,"Segoe UI",Candara,Calibri,Helvetica,AppleSDGothic,Arial,Tahoma,sans-serif,'Gulim';
+  text-align: center;
+  font-size: 11px;
+  border: 1px solid red;
+  background: #FDEFF0;
+  max-width: 300px;
+  padding: 5px 15px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.Form .Buttons {
+  max-width: 300px;
+  margin: 0 auto;
+}
 .Form .Buttons .opButton {
   position: relative;
   height: 37px;
-  max-width: 300px;
+  width: 300px;
   margin: 0 auto;
   margin-top: 15px;
 }
 .Form .Buttons .opButton .ThirdPartyLoginButton {
   width: 126.375px;
-}
-.Form .Buttons .opButton .FormDesc {
-  width: 350px;
 }
 .blueRule { 
   position: relative;
@@ -35,6 +48,3 @@
 .blueRule hr { 
   display: none; 
 } 
-
-
-
