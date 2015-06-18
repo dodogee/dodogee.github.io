@@ -25,11 +25,12 @@
   margin-top: 15px;
 }
 .greyRule { 
+  position: relative;
   background: #CECECE; 
   width: 300px; 
   height: 1px; 
   padding: 0; 
-  margin: 0 auto;
+  margin: 0;
 } 
 .greyRule hr { 
   display: none; 
