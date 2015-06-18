@@ -21,6 +21,9 @@
 .Form .Buttons .opButton .ThirdPartyLoginButton {
   width: 126.375px;
 }
+.Form .Buttons .opButton .FormDesc {
+  width: 350px;
+}
 .blueRule { 
   position: relative;
   background: #2c3e50; 
