@@ -14,54 +14,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=0.5">
+    
     <title>로그인 :: Lounge</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
-    <script src="js/todos.js"></script>
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/user.css">
+    
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="autocomplete" content="off">
+    
+    <!-- css & stylesheet-->
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/user.css">
     <link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
     <link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
     <link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
     <link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
     <link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/spin.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    
+    <!-- App code -->
+    <script src="js/todos.js"></script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-64281832-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
   </head>
 
   <body>
+    <!-- Facebook integration -->
     <div id="fb-root"></div>
     <script>
-      //***********************************************************
-      // Be sure to add your Parse Keys and Facebook App ID Below!
-      //***********************************************************
-      // Initialize Parse
-      Parse.initialize("cfwULV0DDbuYUytwY7Ve9gyrFvKM2jJcGWabPqIU", "lUKeO8vWE2QxQwdAFNZhKpKOW3IhKQyd0YOMghcv");
-      // Initialize the Facebook SDK with Parse as described at 
-      // https://parse.com/docs/js_guide#fbusers
-      window.fbAsyncInit = function() {
-        // init the FB JS SDK
-        Parse.FacebookUtils.init({
-          appId      : '1459046514407348', // Facebook App ID
-          //channelUrl : '//www.lounge.com/channel.html', // Channel File
-          //status     : true, // check login status
-          //cookie     : true, // enable cookies to allow Parse to access the session
-          xfbml      : true  // parse XFBML
-          //version    : 'v2.3'
-        });
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.3&appId=1459046514407348";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      (function(d, debug){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document, /*debug*/ false));
     </script>
     <script>
       $(function(){
@@ -98,16 +100,17 @@
 	      	<div class="content">
                 </div>
 	      </div>
+
 	      <!-- Templates -->
 	      <script type="text/template" id="login-template">
-	      <header id="header"></header>
+	      
 	      <div class="Form">
-	        <form class="login-form">
+	        <form class="login-form .focus">
 	          <div class="error" style="display:none"></div>
 	          <input type="hidden" name="referer" value="http://lounge.parseapp.com/">
 	          <div class="Input Email">
 	            <span class="title"><i class="icon-user"></i></span>
-	            <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="이메일"></span>
+	            <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="학번 or 계정명"></span>
 	          </div>
 	          <div class="Input Password">
 	            <span class="title"><i class="icon-key"></i></span>
@@ -119,7 +122,7 @@
 	            <button class="opButton green login">로그인</button>
 	            <a href="#" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
 	            <div class="blueRule"><hr /></div>
-	            <a href="#" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook" onclick="Login.loginWithFacebook(this); return false;">
+	            <a href="#" id="login" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook">
 	            <i class="icon-facebook icon-large"></i>
 	              &nbsp;
 	              페이스북으로 접속
@@ -135,7 +138,7 @@
 	            <span class="input"><input type="password" id="signup-password" class="Password" name="password" placeholder="비밀번호"></span>
 	          </div>
 	            <div class="Input Name">
-  	          <span class="input"><input type="text" id="signup-username" class="Name" name="name" placeholder="학번 or 닉네임"></span>
+  	          <span class="input"><input type="text" id="signup-username" class="Name" name="name" placeholder="학번 or 계정명"></span>
   	          </div>
   	          <div class="Buttons">
 	            <button class="opButton green join">회원가입</button>
@@ -147,6 +150,10 @@
 	      </div>
 	      </script>
 	      <script type="text/template" id="manage-todos-template">
+	      	<div id="todoapp">
+	      	  <div class="content">
+                  </div>
+	        </div>
                 <div id="user-info">
                   Signed in as <%= Parse.User.current().escape("username") %> (<a href="#" class="log-out">Log out</a>)
                 </div>
@@ -209,5 +216,6 @@
     <script type="text/template" id="check-template">
       <div id="nprogress" style="transition: all 200ms linear; -webkit-transition: all 200ms linear; opacity: 0;"><div class="bar" role="bar" style="transform: translate3d(0%, 0px, 0px); transition: all 200ms ease; -webkit-transition: all 200ms ease;"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div></div>
     </script>
+    
   </body>
 </html>
