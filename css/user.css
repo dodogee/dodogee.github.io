@@ -24,7 +24,7 @@
   margin: 0 auto;
   margin-top: 15px;
 }
-.greyRule { 
+.blueRule { 
   position: relative;
   background: #CECECE; 
   max-width: 300px; 
@@ -34,7 +34,7 @@
   margin-top: 15px;
   margin-bottom: 15px;
 } 
-.greyRule hr { 
+.blueRule hr { 
   display: none; 
 } 
 
