@@ -97,15 +97,14 @@
 	          <div class="Buttons">
 	            <button class="opButton green login">로그인</button>
 	            <a href="#" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
+	          </div>
+	          <div class="ThirdPartyLoginButtons">
 	            <a href="#" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook" onclick="Login.loginWithFacebook(this); return false;">
 	            <i class="icon-facebook icon-large"></i>
 	              &nbsp;
 	              페이스북으로 접속
 	            </a>
 	          </div>
-	          //<div class="ThirdPartyLoginButtons">
-	            
-	          //</div>
 	        </form>
 	      </div>
 	      <div class="FormDesc">
@@ -194,8 +193,10 @@
         </div>
       </div>
     </div>
+    <script type="text/template" id="check-template">
     <div id="nprogress" style="transition: all 200ms linear; -webkit-transition: all 200ms linear; opacity: 0;"><div class="bar" role="bar" style="transform: translate3d(0%, 0px, 0px); transition: all 200ms ease; -webkit-transition: all 200ms ease;"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div></div>
     <ul id="noty_topCenter_layout_container" class="i-am-new" style="top: 20px; left: 330.5px; position: fixed; width: 310px; height: auto; margin: 0px; padding: 0px; list-style-type: none; z-index: 10000000;"><li style="overflow: hidden; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px; width: 310px; cursor: pointer;"><div class="noty_bar noty_type_error" id="noty_1374544744783698400"><div class="AlertNotyContainer"><div class="noty_message alert red" style="font-size: 11px; text-align: center;"><span class="noty_text">이메일을 입력해주세요.</span></div></div></div></li></ul>
     <ul id="noty_topCenter_layout_container" class="i-am-new" style="top: 20px; left: 330.5px; position: fixed; width: 310px; height: auto; margin: 0px; padding: 0px; list-style-type: none; z-index: 10000000;"><li style="overflow: hidden; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px; width: 310px; cursor: pointer;"><div class="noty_bar noty_type_error" id="noty_352537241207791400"><div class="AlertNotyContainer"><div class="noty_message alert red" style="font-size: 11px; text-align: center;"><span class="noty_text">비밀번호를 입력해주세요.</span></div></div></div></li></ul>
+    </script>
   </body>
 </html>
