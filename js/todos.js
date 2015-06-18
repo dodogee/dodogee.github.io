@@ -336,7 +336,7 @@ $(document).ready(function() {
     },
     signUpLink: function(e) {
       this.$(".login-form").hide().addClass('.hide');
-      this.$(".login-form").show().addClass('.show');
+      this.$(".signup-form").show().addClass('.show');
       this.undelegateEvents();
       delete this;
     },
