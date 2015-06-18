@@ -10,22 +10,21 @@
   width: 300px;
   margin: 0 auto;
 }
-.Form .login-form .Buttons,
-.Form .login-form .Buttons .opButton{
+.Form .Buttons,
+.Form .Buttons .opButton{
   position: relative;
   height: 37px;
   width: 300px;
   margin: 0 auto;
   margin-top: 15px;
 }
-.Form .login-form .ThirdPartyLoginButtons,
-.Form .login-form .ThirdPartyLoginButtons .opButton {
+.Form .Buttons .ThirdPartyLoginButtons .opButton{
   position: relative;
   height: 37px;
   margin: 0 auto;
   margin-top: 15px;
 }
-.Form .blueRule { 
+.Form .Buttons .blueRule { 
   position: relative;
   background: #CECECE; 
   max-width: 300px; 
@@ -34,7 +33,7 @@
   margin: 0;
   margin-top: 15px;
 } 
-.Form .blueRule hr { 
+.Form .Buttons .blueRule hr { 
   display: none; 
 } 
 
