@@ -11,18 +11,15 @@
   margin: 0 auto;
 }
 .Form .Buttons,
-.Form .Buttons .opButton{
+.Form .Buttons .opButton {
   position: relative;
   height: 37px;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto;
   margin-top: 15px;
 }
-.Form .ThirdPartyLoginButtons .opButton {
-  margin-top: 15px;
-  padding-top: 15px;
-  text-align: center;
-  border-top: 1px solid #2c3e50;
+.Form .Buttons .opButton .ThirdPartyLoginButton {
+  width: 126.375px;
 }
 .blueRule { 
   position: relative;
