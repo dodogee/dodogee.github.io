@@ -10,6 +10,7 @@
   width: 300px;
   margin: 0 auto;
 }
+.Form .Buttons,
 .Form .Buttons .opButton{
   position: relative;
   height: 37px;
@@ -17,6 +18,7 @@
   margin: 0 auto;
   margin-top: 15px;
 }
+.Form .ThirdPartyLoginButtons,
 .Form .ThirdPartyLoginButtons .opButton {
   position: relative;
   height: 37px;
