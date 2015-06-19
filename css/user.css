@@ -358,14 +358,18 @@ label[for='toggle-all'] {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     #toggle-all,
     #todo-list li .toggle {
-	background: none;
+	    background: none;
     }
 }
 #todoapp .content #user-info {
-    padding: 5px 10px;
-    border-top: 1px solid #ededed;
-    margin-bottom: 0px;
-    text-align: right;
+	color: #ecf0f1;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+  font-family: 'Open Sans','Lato',Segoe,"Segoe UI",Candara,Calibri,Helvetica,'Nanum Barun Gothic','Nanum Gothic','Malgun Gothic','맑은고딕','맑은 고딕',"Apple SD Gothic Neo",AppleGothic,Dotum,Gulim,Optima,Segoe,"Segoe UI",Candara,Calibri,Helvetica,AppleSDGothic,Arial,Tahoma,sans-serif,'Gulim';
+  padding: 5px 10px;
+  border-top: 1px solid #ededed;
+  margin-bottom: 0px;
+  text-align: right;
 }
 
 
