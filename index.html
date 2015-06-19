@@ -75,99 +75,77 @@
       })
     </script>
     <!-- Todo App Interface -->
+    
+	    <div id="lounge">
+	      <div class="content">
+              </div>
+	    </div>
+    <!-- Templates -->
+    <script type="text/template" id="login-template">
     <div class="PhotoScreen">
       <div class="PhotoScreenBg" style="background-image: url(//4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg)">
         <div class="PhotoScreenBgVinetter"></div>
 	<div class="PhotoScreenBgPattern"></div>
       </div>
-      <script>
-        $(function(){
-          $('.VerticalMiniForm .Form .Input input').on('focus', function(){
-            $(this).closest('.Input').addClass('focus');
-          }).on('blur', function(){
-          $(this).closest('.Input').removeClass('focus');
-          })
-        })
-      </script>
-	<div class="PhotoScreenContent">
-	  <div class="Center">
-	    <div class="VerticalMiniForm LoginForm">
-	      <div class="Logo">
-	        <h1><a href="/">LOUNGE</a></h1>
-	        <!--<h1><a href="/"><img src="//sk2.op.gg/images/global_logo_index.png"></a></h1>-->
-	      </div>
-	      <div id="lounge">
-	      	<div class="content">
-                </div>
-	      </div>
-
-	      <!-- Templates -->
-	      <script type="text/template" id="login-template">
-	      
-	      <div class="Form">
-	        <form class="login-form .focus">
-	          <div class="error" style="display:none"></div>
-	          <input type="hidden" name="referer" value="http://lounge.parseapp.com/">
-	          <div class="Input Email">
-	            <span class="title"><i class="icon-user"></i></span>
-	            <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="학번 or 계정명"></span>
+      <div class="PhotoScreenContent">
+        <div class="Center">
+          <div class="VerticalMiniForm LoginForm">
+	    <div class="Logo">
+	      <h1><a href="/">LOUNGE</a></h1>
+	      <!--<h1><a href="/"><img src="//sk2.op.gg/images/global_logo_index.png"></a></h1>-->
+	    </div>
+	    <div class="Form">
+	      <form class="login-form .focus">
+	        <div class="error" style="display:none"></div>
+	        <input type="hidden" name="referer" value="http://lounge.parseapp.com/">
+	        <div class="Input Email">
+	          <span class="title"><i class="icon-user"></i></span>
+	          <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="학번 or 계정명"></span>
+	        </div>
+	        <div class="Input Password">
+	          <span class="title"><i class="icon-key"></i></span>
+	          <span class="input"><input type="password" id="login-password" class="Password" name="password" placeholder="비밀번호"></span>
+	          <div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a>
 	          </div>
-	          <div class="Input Password">
-	            <span class="title"><i class="icon-key"></i></span>
-	            <span class="input"><input type="password" id="login-password" class="Password" name="password" placeholder="비밀번호"></span>
-	            <div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a>
-	            </div>
-	          </div>
-	          <div class="Buttons">
-	            <button class="opButton green login">로그인</button>
-	            <a href="#" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
-	            <div class="blueRule"><hr /></div>
-	            <a href="#" id="login" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook">
-	            <i class="icon-facebook icon-large"></i>
-	              &nbsp;
-	              페이스북으로 접속
-	            </a>
-	          </div>
-	        </form>
-	        <form class="signup-form" style="display:none">
-	          <div class="error" style="display:none"></div>
-	          <div class="Input Email">
-	            <span class="input"><input type="text" id="signup-email" class="Email" name="email" placeholder="이메일"></span>
-	          </div>
-	          <div class="Input Password">
-	            <span class="input"><input type="password" id="signup-password" class="Password" name="password" placeholder="비밀번호"></span>
-	          </div>
-	            <div class="Input Name">
-  	          <span class="input"><input type="text" id="signup-username" class="Name" name="name" placeholder="학번 or 계정명"></span>
-  	          </div>
-  	          <div class="Buttons">
-	            <button class="opButton green join">회원가입</button>
-	          </div>
-	        </form>
-	      </div>
-	      <div class="FormDesc">
-	        이메일 및 개인정보는 절대 타인에게 공개되지 않으므로 안심하세요!
-	      </div>
+	        </div>
+	        <div class="Buttons">
+	          <button class="opButton green login">로그인</button>
+	          <a href="#" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
+	          <div class="blueRule"><hr /></div>
+	          <a href="#" id="login" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook">
+	          <i class="icon-facebook icon-large"></i>
+	            &nbsp;
+	            페이스북으로 접속
+	          </a>
+	        </div>
+	      </form>
+	      <form class="signup-form" style="display:none">
+	        <div class="error" style="display:none"></div>
+	        <div class="Input Email">
+	          <span class="input"><input type="text" id="signup-email" class="Email" name="email" placeholder="이메일"></span>
+	        </div>
+	        <div class="Input Password">
+	          <span class="input"><input type="password" id="signup-password" class="Password" name="password" placeholder="비밀번호"></span>
+	        </div>
+	          <div class="Input Name">
+  	        <span class="input"><input type="text" id="signup-username" class="Name" name="name" placeholder="학번 or 계정명"></span>
+  	        </div>
+  	        <div class="Buttons">
+	          <button class="opButton green join">회원가입</button>
+	        </div>
+	      </form>
+	    </div>
+	    <div class="FormDesc">
+	      이메일 및 개인정보는 절대 타인에게 공개되지 않으므로 안심하세요!
 	    </div>
 	  </div>
-        </div>
-        <div class="PhotoInformation">
-          라운지
-        </div>
+	</div>
+      </div>
+      <div class="PhotoInformation">
+        라운지
       </div>
     </div>
-    <div id="todoapp">
-      <div class="title">
-        <h1>Parse Todos</h1>
-      </div>
-
-      <div class="content">
-      </div>
-    </div>
-    <div id="credits">
-      Powered by <a href="https://www.parse.com">Parse</a> using the <a href="https://www.parse.com/docs/js_guide">JavaScript SDK</a>.<br /><br />
-      Learn how we built it in the <a href='https://parse.com/tutorials/todo-app-with-javascript'>tutorial</a>.
-    </div>
+    </script>
     <script type="text/template" id="manage-todos-template">
       <div id="user-info">
         Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
@@ -220,7 +198,5 @@
 	<button id="clear-completed">Clear completed (<%= done %>)</button>
       </footer>
     </script>
-
-    <!-- Templates -->
   </body>
 </html>
