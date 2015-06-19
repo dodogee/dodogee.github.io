@@ -76,11 +76,14 @@
       })
     </script>
     <!-- Todo App Interface -->
-    
-	    <div id="lounge">
-	      <div class="content">
-              </div>
-	    </div>
+    <div id="lounge">
+      <div class="content-log">
+      </div>
+      <div id="todoapp">
+      	<div class="content">
+        </div>
+      </div>
+    </div>
     <!-- Templates -->
     <script type="text/template" id="login-template">
     <div class="PhotoScreen">
@@ -148,6 +151,7 @@
     </div>
     </script>
     <script type="text/template" id="manage-todos-template">
+
       <div id="user-info">
         Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
       </div>
@@ -169,9 +173,11 @@
 
         <div id="todo-stats"></div>
       </div>
+
     </script>
 
     <script type="text/template" id="item-template">
+
       <li class="<%= done ? 'completed' : '' %>">
 	<div class="view">
 	  <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
@@ -180,9 +186,11 @@
 	</div>
 	<input class="edit" value="<%= content %>">
       </li>
+
     </script>
 
     <script type="text/template" id="stats-template">
+
       <footer id="footer">
 	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
 	<ul id="filters">
@@ -198,6 +206,7 @@
 	</ul>
 	<button id="clear-completed">Clear completed (<%= done %>)</button>
       </footer>
+
     </script>
   </body>
 </html>
