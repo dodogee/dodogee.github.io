@@ -384,13 +384,14 @@ $(document).ready(function() {
                       }
                     },
                     error: function(user, error) {
-                      self.$(".login-form .error").html("정보를 정확하게 입력해주세요!"+response.name+response.password+response.email).show();
-                      self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
+                      new ManageTodosView();
+                      self.undelegateEvents();
+                      delete self;
                     }
                   });
                 } else {
                   self.$(".login-form .error").html("페이스북에 문제가 생긴 모양입니다!").show();
-                  self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
+                  self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin({length: 5, radius: 5, lines: 8, width: 3, color: "#fff"});
                 }
               });
             // If it's an existing user that was logged in, we save the score
@@ -403,7 +404,7 @@ $(document).ready(function() {
           error: function(user, error) {
             Parse.User.logOut();
             self.$(".login-form .error").html("작업이 완료되지 않았습니다!").show();
-            self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
+            self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin({length: 5, radius: 5, lines: 8, width: 3, color: "#fff"});
           }
         });
         this.$(".LoginButtonWithFacebook a").attr("disabled", "disabled");
