@@ -353,7 +353,7 @@ $(document).ready(function() {
     },
     loginWithFacebook: function(e) {
       var self = this;
-      $(".LoginButtonWithFacebook")
+      self.$(".LoginButtonWithFacebook")
         .toggleClass("disabled")
         .empty()
         .spin({length: 5, radius: 5, lines: 8, width: 3, color: "#fff"});
@@ -380,17 +380,17 @@ $(document).ready(function() {
                           delete self;
                       } else {
                           self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
-                          $(".LoginButtonWithFacebook").removeClass("disabled");
+                          self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
                       }
                     },
                     error: function(user, error) {
                       self.$(".login-form .error").html("정보를 정확하게 입력해주세요!"+response.name+response.password+response.email).show();
-                      self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
+                      self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
                     }
                   });
                 } else {
                   self.$(".login-form .error").html("페이스북에 문제가 생긴 모양입니다!").show();
-                  self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
+                  self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
                 }
               });
             // If it's an existing user that was logged in, we save the score
@@ -402,7 +402,8 @@ $(document).ready(function() {
           },
           error: function(user, error) {
             Parse.User.logOut();
-            self.$(".login-form .error").html("뭔가 잘못된 것 같습니다!").show();
+            self.$(".login-form .error").html("작업이 완료되지 않았습니다!").show();
+            self.$(".LoginButtonWithFacebook").removeClass("disabled").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").spin();
           }
         });
         this.$(".LoginButtonWithFacebook a").attr("disabled", "disabled");
