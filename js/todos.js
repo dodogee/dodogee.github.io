@@ -380,7 +380,7 @@ $(document).ready(function() {
                           delete self;
                       } else {
                           self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
-                          self.$(".LoginButtonWithFacebook").removeClass("disabled").spin({}).html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속").show();
+                          self.$(".LoginButtonWithFacebook").removeClass("disabled").spin().show();
                           self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
                       }
                     },
