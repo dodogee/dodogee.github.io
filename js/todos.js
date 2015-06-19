@@ -311,7 +311,7 @@ $(document).ready(function() {
       "submit form.signup-form": "signUp"
     },
 
-    el: ".content",
+    el: ".content-log",
     
     initialize: function() {
       _.bindAll(this, "logIn", "signUpLink", "loginWithFacebook", "signUp");
