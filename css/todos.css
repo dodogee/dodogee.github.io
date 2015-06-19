@@ -57,11 +57,11 @@ body {
 }
 
 #todoapp input::-webkit-input-placeholder {
-    font-style: italic;
+    
 }
 
 #todoapp input:-moz-placeholder {
-    font-style: italic;
+    
     color: #a9a9a9;
 }
 
@@ -69,8 +69,7 @@ body {
     position: absolute;
     top: -120px;
     width: 100%;
-    font-size: 70px;
-    font-weight: bold;
+    font-size: 30px;
     text-align: center;
     color: #888;
     -webkit-text-rendering: optimizeLegibility;
@@ -116,7 +115,7 @@ body {
     margin: 0;
     width: 100%;
     font-size: 24px;
-    font-family: inherit;
+    font-family: 'Open Sans','Lato',Segoe,"Segoe UI",Candara,Calibri,Helvetica,'Nanum Barun Gothic','Nanum Gothic','Malgun Gothic','맑은고딕','맑은 고딕',"Apple SD Gothic Neo",AppleGothic,Dotum,Gulim,Optima,Segoe,"Segoe UI",Candara,Calibri,Helvetica,AppleSDGothic,Arial,Tahoma,sans-serif,'Gulim';
     line-height: 1.4em;
     border: 0;
     outline: none;
@@ -173,7 +172,7 @@ label[for='toggle-all'] {
 
 #toggle-all:before {
     content: '»';
-    font-size: 28px;
+    font-size: 14px;
     color: #d9d9d9;
     padding: 0 25px 7px;
 }
