@@ -1,212 +1,73 @@
-<!DOCTYPE html>
-<!--
-88           ,ad8888ba,   88         88 8888       88    ,ad8888ba,  88888888888 
-88          d8"'    `"8b  88         88 88 88      88   d8"'    `"8b 88
-88         d8'        `8b 88         88 88  88     88  d8'           88
-88         88          88 88         88 88   88    88  88            8dev@Lounge
-88         88          88 88         88 88    88   88  88      88888 88"""""""""
-88         Y8,        ,8P Y8,        88 88     88  88  Y8,        88 88
-88          Y8a.    .a8P  Y8a.       88 88      88 88  Y8a.    .a88  88
-88888888888  `"Y8888Y"'    `"Y888888888 88       8888   `"Y88888P"   88888888888
-     Copyright © 2015 Lounge. All rights reserved.                           -->
-<html>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=0.5">
-    
-    <title>로그인 :: Lounge</title>
-    
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="autocomplete" content="off">
-    
-    <!-- css & stylesheet-->
-    <!--<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">-->
-    <link rel="stylesheet" href="css/user.css">
-    <link rel="stylesheet" href="css/todos.css" media="all" type="text/css"/>
-    <link href="//sk2.op.gg/css2/min.css?1433502019" rel="stylesheet" type="text/css">
-    <link href="//sk2.op.gg/css2/min.page.css?1433502019" rel="stylesheet" type="text/css">
-    <link href="//sk2.op.gg/css2/min.page2.css?1433502019" rel="stylesheet" type="text/css">
-    <link href="//sk2.op.gg/css2/min.mobile.css?1433502019" rel="stylesheet" type="text/css">
-    <link href="//sk2.op.gg/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- Libraries -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/spin.min.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    
-    <!-- App code -->
-    <script src="js/todos.js"></script>
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<head>
+  <meta charset="utf-8">
 
-      ga('create', 'UA-64281832-1', 'auto');
-      ga('send', 'pageview');
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+</head>
 
-    </script>
-    <!-- End Google Analytics -->
-  </head>
+<body>
+  
+  <div id="main">
+    <h1>You're ready to use Parse!</h1>
 
-  <body>
-    <!-- Facebook integration -->
-    <div id="fb-root"></div>
-    <script>
-      (function(d, debug){
-         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement('script'); js.id = id; js.async = true;
-         js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-         ref.parentNode.insertBefore(js, ref);
-       }(document, /*debug*/ false));
-    </script>
-    <script>
-      $(function(){
-        $('.VerticalMiniForm .Form .Input input').on('focus', function(){
-            $(this).closest('.input').addClass('focus');
-          }).on('blur', function(){
-            $(this).closest('.input').removeClass('focus');
-          })
-      })
-    </script>
-    <!-- Todo App Interface -->
-    <div id="lounge">
-      <div class="content-log">
-      </div>
-      <div id="todoapp">
-      	<div class="content">
-        </div>
-      </div>
+    <p>Read the documentation and start building your JavaScript app:</p>
+
+    <ul>
+      <li><a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a></li>
+      <li><a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a></li>
+    </ul>
+
+    <div style="display:none" class="error">
+      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
     </div>
-    <!-- Templates -->
-    <script type="text/template" id="login-template">
-    <div class="PhotoScreen">
-      <div class="PhotoScreenBg" style="background-image: url(//4.bp.blogspot.com/-E10nk83X-JI/T1Ok7vS42QI/AAAAAAAAAGA/jNvfJCbXcH0/s1600/lounge.jpg)">
-        <div class="PhotoScreenBgVinetter"></div>
-	<div class="PhotoScreenBgPattern"></div>
-      </div>
-      <div class="PhotoScreenContent">
-        <div class="Center">
-          <div class="VerticalMiniForm LoginForm">
-	    <div class="Logo">
-	      <h1><a href="/">LOUNGE</a></h1>
-	      <!--<h1><a href="/"><img src="//sk2.op.gg/images/global_logo_index.png"></a></h1>-->
-	    </div>
-	    <div class="Form">
-	      <form class="login-form .focus">
-	        <div class="error" style="display:none"></div>
-	        <input type="hidden" name="referer" value="http://lounge.parseapp.com/">
-	        <div class="Input Email">
-	          <span class="title"><i class="icon-user"></i></span>
-	          <span class="input"><input type="text"  id="login-email" class="Email" name="identifier" placeholder="학번 or 계정명"></span>
-	        </div>
-	        <div class="Input Password">
-	          <span class="title"><i class="icon-key"></i></span>
-	          <span class="input"><input type="password" id="login-password" class="Password" name="password" placeholder="비밀번호"></span>
-	          <div class="Icon"><a href="/member/find" class="tip" original-title="비밀번호 찾기"><i class="icon-question-sign"></i></a>
-	          </div>
-	        </div>
-	        <div class="Buttons">
-	          <button class="opButton green login">로그인</button>
-	          <a href="#" class="opButton blue joinLink">이메일 주소로 간단하게 회원가입</a>
-	          <div class="blueRule"><hr /></div>
-	          <a href="#" id="login" class="opButton ThirdPartyLoginButton LoginButtonWithFacebook">
-	          <i class="icon-facebook icon-large"></i>
-	            &nbsp;
-	            페이스북으로 접속
-	          </a>
-	        </div>
-	      </form>
-	      <form class="signup-form" style="display:none">
-	        <div class="error" style="display:none"></div>
-	        <div class="Input Email">
-	          <span class="input"><input type="text" id="signup-email" class="Email" name="email" placeholder="이메일"></span>
-	        </div>
-	        <div class="Input Password">
-	          <span class="input"><input type="password" id="signup-password" class="Password" name="password" placeholder="비밀번호"></span>
-	        </div>
-	          <div class="Input Name">
-  	        <span class="input"><input type="text" id="signup-username" class="Name" name="name" placeholder="학번 or 계정명"></span>
-  	        </div>
-  	        <div class="Buttons">
-	          <button class="opButton green join">회원가입</button>
-	        </div>
-	      </form>
-	    </div>
-	    <div class="FormDesc">
-	      이메일 및 개인정보는 절대 타인에게 공개되지 않으므로 안심하세요!
-	    </div>
-	  </div>
-	</div>
-      </div>
-      <div class="PhotoInformation">
-        라운지
-      </div>
+
+    <div style="display:none" class="success">
+      <p>We've also just created your first object using the following code:</p>
+      
+        <code>
+          var TestObject = Parse.Object.extend("TestObject");<br/>
+          var testObject = new TestObject();<br/>
+          testObject.save({foo: "bar"});
+        </code>
     </div>
-    </script>
-    <script type="text/template" id="manage-todos-template">
+  </div>
 
-      <div id="user-info">
-        Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
-      </div>
+  <script type="text/javascript">
+  Parse.initialize("cfwULV0DDbuYUytwY7Ve9gyrFvKM2jJcGWabPqIU", "lUKeO8vWE2QxQwdAFNZhKpKOW3IhKQyd0YOMghcv");
+  var user = new Parse.User();
+  user.set("username", "my name");
+  user.set("password", "my pass");
+  user.set("email", "email@example.com");
+  
+  // other fields can be set just like with Parse.Object
+  user.set("phone", "650-555-0000");
+  
+  user.signUp(null, {
+  success: function(user) {
+    // Hooray! Let them use the app now.
+  },
+  error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+      testObject.save({foo: "bar"}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+  </script>
+</body>
 
-      <div class="section">
-
-        <header id="header">
-          <input id="new-todo" placeholder="What needs to be done?" type="text" />
-        </header>
-
-        <div id="main">
-          <input id="toggle-all" type="checkbox">
-          <label for="toggle-all">Mark all as complete</label>
-          
-          <ul id="todo-list">
-            <img src='images/spinner.gif' class='spinner' />
-          </ul>
-        </div>
-
-        <div id="todo-stats"></div>
-      </div>
-
-    </script>
-
-    <script type="text/template" id="item-template">
-
-      <li class="<%= done ? 'completed' : '' %>">
-	<div class="view">
-	  <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
-	  <label class="todo-content"><%= content %></label>
-	  <button class="todo-destroy"></button>
-	</div>
-	<input class="edit" value="<%= content %>">
-      </li>
-
-    </script>
-
-    <script type="text/template" id="stats-template">
-
-      <footer id="footer">
-	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
-	<ul id="filters">
-	  <li>
-	    <a href="javascript:void(0)" id="all" class="selected">All</a>
-	  </li>
-	  <li>
-	    <a href="javascript:void(0)" id="active">Active</a>
-	  </li>
-	  <li>
-	    <a href="javascript:void(0)" id="completed">Completed</a>
-	  </li>
-	</ul>
-	<button id="clear-completed">Clear completed (<%= done %>)</button>
-      </footer>
-
-    </script>
-  </body>
 </html>
