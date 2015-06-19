@@ -353,7 +353,7 @@ $(document).ready(function() {
     },
     loginWithFacebook: function(e) {
       var self = this;
-      var session = "<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속";
+      var session = "<i class="icon-facebook icon-large"></i>&nbsp;페이스북으로 접속";
       self.$(".LoginButtonWithFacebook")
         .addClass("disabled")
         .empty()
