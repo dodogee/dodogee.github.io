@@ -23,8 +23,8 @@ body {
     line-height: 1.4em;
     background: #eeeeee url('../images/bg.png');
     color: #4d4d4d;
-    width: 550px;
-    margin: 0 auto;
+    
+    
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
@@ -35,8 +35,10 @@ body {
 #todoapp {
     background: #fff;
     background: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
     margin: 130px 0 40px 0;
     border: 1px solid #ccc;
+    width: 550px;
     position: absolute;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
