@@ -353,6 +353,7 @@ $(document).ready(function() {
     },
     loginWithFacebook: function(e) {
       var self = this;
+      var session = "<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속";
       self.$(".LoginButtonWithFacebook")
         .addClass("disabled")
         .empty()
@@ -381,7 +382,7 @@ $(document).ready(function() {
                       } else {
                           self.$(".login-form .error").html("메시지를 보냈습니다. 이메일을 확인해주세요!").show();
                           self.$(".LoginButtonWithFacebook").removeClass("disabled").spin().show();
-                          self.$(".LoginButtonWithFacebook").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속");
+                          self.$(".LoginButtonWithFacebook").after(session);
                           self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
                       }
                     },
@@ -394,7 +395,7 @@ $(document).ready(function() {
                 } else {
                   self.$(".login-form .error").html("페이스북에 문제가 생긴 모양입니다!").show();
                   self.$(".LoginButtonWithFacebook").removeClass("disabled").spin().show();
-                  self.$(".LoginButtonWithFacebook").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속");
+                  self.$(".LoginButtonWithFacebook").after(session);
                   self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
                 }
               });
@@ -409,7 +410,7 @@ $(document).ready(function() {
             Parse.User.logOut();
             self.$(".login-form .error").html("작업이 완료되지 않았습니다!").show();
             self.$(".LoginButtonWithFacebook").removeClass("disabled").spin().show();
-            self.$(".LoginButtonWithFacebook").html("<i class="icon-facebook icon-large"></i>"+"&nbsp;"+"페이스북으로 접속");
+            self.$(".LoginButtonWithFacebook").after(session);
             self.$(".LoginButtonWithFacebook a").removeAttr("disabled");
           }
         });
