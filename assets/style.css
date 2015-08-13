@@ -1,0 +1,36 @@
+
+.board{
+	color:#ffffff;
+	background-color:#404040;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	margin-bottom: 0px;
+	padding: 10px;
+	background-size: cover;
+	display: block;
+}
+
+body{
+	
+}
+
+.list{
+	position:relative;
+	height:20px;
+	width:cover;
+	border-radius:5px;
+	background-color:#ffffff;
+}
+#na{
+	width: 500px;
+	height: 500px;
+	background-color:#cccccc;
+}
+#item{
+	position:relative;
+	height: 20px;
+	width: 40px;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
