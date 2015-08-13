@@ -12,34 +12,52 @@
 		<title>Inventor-X</title>
 	</head>
 	<body>
-	 		 <div class="container">
+	 		 <div class="container-fluid">
 				<div class="row">
-					<div class="col-md-2">
-						<h3>Simulating List</h3>
-						<div>
-							<div class="list">Time</div>
-							<div>Location</div>
-							<div>Heartbeat</div>
-						</div>
+					<div class="col-sm-3 col-md-2 sidebar">
+						<h3>Input</h3>
+						<ul class="nav nav-sidebar">
+							<li><a href="#">Brightness<span class="sr-only">(current)</span></a></li>
+							<li><a>Length</a></li>
+							<li><a>Compass</a></li>
+							<li><a>Heart beat</a></li>
+							<li><a>Sound</a></li>
+							<li><a>Time</a></li>
+							<li><a>Rotation</a></li>
+							<li><a>Bluetooth</a></li>
+							<li><a>Wi-Fi</a></li>
+							<li><a>Camera</a></li>
+							<li><a>Color</a></li>
+							<li><a>Gyro</a></li>
+						</ul>
 						<div>
 							<button type="button" id="simulButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
 								Simulating
 							</button>
 						</div>
 					</div>
-				<div class="col-md-8 board">
+				<div class="col-sm-6 col-md-8 board">
 					<h3>Board</h3>
 					<p>This is a board.</p>
-					<div id="na">
-						<div id="select">
-							<div id="item"></div>
-							<div id="item"></div>
-							<div id="item"></div>
-						</div>
-					</div>
 				</div>
-				<div class="col-md-2">
-					<h3>Device List</h3>
+				<div class="col-sm-3 col-md-2 sidebar">
+					<h3>Output</h3>
+					<ul class="nav nav-sidebar">
+						<li><a href="#">Speaker<span class="sr-only">(current)</span></a></li>
+						<li><a>Display</a></li>
+						<li><a>Movement</a></li>
+						<li><a>Light</a></li>
+						<li><a>Vibation</a></li>
+						<li><a>Save Data</a></li>
+						<li><a>H A</a></li>
+						<li><a>Waterpump</a></li>
+						<li><a>Heater</a></li>
+					</ul>
+					<div>
+						<button type="button" id="simulButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+							Create
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
