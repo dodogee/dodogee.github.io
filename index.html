@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="https://s3-ap-northeast-1.amazonaws.com/projectxinventor/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400, 300, 500, 100">
 		<link rel="stylesheet" type="text/css" href="./assets/style.css">
 		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
  		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -9,28 +10,28 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-		<title>Inventor-X</title>
+		<title>X-Inventor</title>
 	</head>
 	<body>
 	 		 <div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-3 col-md-2 sidebar">
-						<h3>Input</h3>
+						<div class="input-sidebar"><h2 id="title">INPUT</h2></div>
 						<ul class="nav nav-sidebar">
-							<li><a href="#">Brightness<span class="sr-only">(current)</span></a></li>
-							<li><a>Length</a></li>
-							<li><a>Compass</a></li>
-							<li><a>Heart beat</a></li>
-							<li><a>Sound</a></li>
-							<li><a>Time</a></li>
-							<li><a>Rotation</a></li>
-							<li><a>Bluetooth</a></li>
-							<li><a>Wi-Fi</a></li>
-							<li><a>Camera</a></li>
-							<li><a>Color</a></li>
-							<li><a>Gyro</a></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-232-sun.png"> Brightness</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-69-ruler.png"> Length</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-61-compass.png"> Compass</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Heart beat</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-301-microphone.png"> Sound</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-55-clock.png"> Time</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-82-refresh.png"> Rotation</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-226-bluetooth.png"> Bluetooth</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-74-wifi.png"> Wi-Fi</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-12-camera.png"> Camera</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-91-eyedropper.png"> Color</h3></li>
+							<li class="input-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-234-direction.png"> Gyro</h3></li>
 						</ul>
-						<div>
+						<div class="process">
 							<button type="button" id="simulating" data-loading-text="Loading..." class="btn" autocomplete="off">
 								Simulating
 							</button>
@@ -41,19 +42,19 @@
 					<p>This is a board.</p>
 				</div>
 				<div class="col-sm-3 col-md-2 sidebar">
-					<h3>Output</h3>
+					<div class="output-sidebar"><h2 id="title">OUTPUT</h2></div>
 					<ul class="nav nav-sidebar">
-						<li><a href="#">Speaker<span class="sr-only">(current)</span></a></li>
-						<li><a>Display</a></li>
-						<li><a>Movement</a></li>
-						<li><a>Light</a></li>
-						<li><a>Vibation</a></li>
-						<li><a>Save Data</a></li>
-						<li><a>H A</a></li>
-						<li><a>Waterpump</a></li>
-						<li><a>Heater</a></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Speaker</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Movement</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Light</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Vibration</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Save Data</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> H A</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Waterpump</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Display</h3></li>
+						<li class="output-item"><h3><img id="glyphicons" src="./assets/img/glyphicons-13-heart.png"> Heater</h3></li>
 					</ul>
-					<div>
+					<div class="process">
 						<button type="button" id="create" data-loading-text="Loading..." class="btn" autocomplete="off">
 							Create
 						</button>
