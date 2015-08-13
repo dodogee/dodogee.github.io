@@ -34,3 +34,15 @@ body{
 	border-radius: 5px;
 	background-color: #ffffff;
 }
+#simulating{
+	color: #ffffff;
+	height: 40px;
+	width: 100px;
+	background-color: #337ab7;
+}
+#create{
+	color: #ffffff;
+	height: 40px;
+	width: 100px;
+	background-color: #f0ad4e;
+}
