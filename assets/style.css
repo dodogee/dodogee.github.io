@@ -9,6 +9,8 @@
 	background-size: cover;
 	display: block;
 	z-index: -1;
+	position:relative;
+	padding: 5px;
 }
 .input-sidebar, .output-sidebar{
 	text-align: center;
@@ -30,12 +32,12 @@
 	align:center;
 	margin: 0 auto;
 }
-.input-item:hover{
+.input:hover{
 	background: #337ab7;
 	cursor: pointer;
 	transition: background .5s;
 }
-.output-item:hover{
+.output:hover{
 	background: #f0ad4e;
 	cursor: pointer;
 	transition: background .5s;
@@ -53,4 +55,53 @@
 }
 #create{
 	background-color: #f0ad4e;
+}
+.inputOver{
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #06d5f9;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	z-index: 1;
+}
+
+.outputOver{
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #eaf50a;
+	text-align:center;
+	vertical-align:center;
+	padding: 5px;
+	margin: 5px;
+	z-index: 1;
+}
+
+.inputContent{
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	position:absolute;
+	background-color: #337ab7;
+	text-align:center;
+	vertical-align:center;
+	padding: 5px;
+	margin: 5px;
+	z-index: 1;
+}
+.outputContent{
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #f0ad4e;
+	text-align:center;
+	vertical-align:center;
+	padding: 5px;
+	margin: 5px;
+	z-index: 1;
+}
+#onBoard{
+	z-index:1;
 }
